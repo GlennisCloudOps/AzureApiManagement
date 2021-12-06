@@ -1,0 +1,40 @@
+<policies>
+	<inbound>
+		<base />
+		<set-variable name="userId" value="@{ 
+            string userId;
+            try{ userId = context.User.Id; }
+            catch { userId = "1";}
+            return userId; 
+        }" />
+		<set-header name="context.Api.Name" exists-action="override">
+			<value>@(context.Api.Name)</value>
+		</set-header>
+		<set-header name="context.Api.Version" exists-action="override">
+			<value>@(context.Api.Version)</value>
+		</set-header>
+		<set-header name="context.Request.IpAddress" exists-action="override">
+			<value>@(context.Request.IpAddress)</value>
+		</set-header>
+		<set-header name="context.Api.Operation.Name" exists-action="override">
+			<value>@(context.Operation.Name)</value>
+		</set-header>
+		<set-header name="context.Subscription.Name" exists-action="override">
+			<value>@(context.Subscription.Name)</value>
+		</set-header>
+		<set-header name="context.User.Id" exists-action="override">
+			<value>@((string)context.Variables["userId"])</value>
+		</set-header>
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<find-and-replace from="http://func-gapihubv1-dev-use.azurewebsites.net/hub" to="https://apim-glennis-dev-use.azure-api.net/gapi/hub/v1" />
+		<set-header name="Request-Context" exists-action="delete" />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>

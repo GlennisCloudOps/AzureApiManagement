@@ -1,0 +1,18 @@
+<policies>
+	<inbound>
+		<base />
+		<set-backend-service id="apim-generated-policy" backend-id="func-gapippmv1-dev-use" />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<set-header name="Content-Location" exists-action="override">
+			<value>@("https://apim-glennis-dev-use.azure-api.net/gapi/ppm/communityStatus/v1/" + context.Response.Headers.GetValueOrDefault(headerName: "CommunityStatusId", defaultValue: ""))</value>
+		</set-header>
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>

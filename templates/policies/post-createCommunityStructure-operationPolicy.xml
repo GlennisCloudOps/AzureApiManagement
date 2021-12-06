@@ -1,0 +1,19 @@
+<policies>
+	<inbound>
+		<base />
+		<set-backend-service id="apim-generated-policy" backend-id="func-gapippmv1-dev-use" />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<set-header name="Content-Location" exists-action="override">
+			<value>@("https://apim-glennis-dev-use.azure-api.net/gapi/ppm/v1/community-structures/" + context.Response.Headers.GetValueOrDefault(headerName: "CommunityStructureId", defaultValue: ""))</value>
+		</set-header>
+		<set-header name="CareTypeId" exists-action="delete" />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>

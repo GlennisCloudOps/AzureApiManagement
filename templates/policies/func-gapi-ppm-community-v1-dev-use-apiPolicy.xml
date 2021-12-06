@@ -1,0 +1,21 @@
+<policies>
+	<inbound>
+		<base />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<find-and-replace from="http://func-gapi-ppm-community-v1-dev-use.azurewebsites.net/hub/businessUnits" to="https://apim-glennis-dev-use.azure-api.net/gapi/hub/businessUnits/v1" />
+		<find-and-replace from="http://func-gapi-ppm-community-v1-dev-use.azurewebsites.net/hub/worldRegions" to="https://apim-glennis-dev-use.azure-api.net/gapi/hub/worldRegions/v1" />
+		<find-and-replace from="http://func-gapi-ppm-community-v1-dev-use.azurewebsites.net/hub/countries" to="https://apim-glennis-dev-use.azure-api.net/gapi/hub/countries/v1" />
+		<find-and-replace from="http://func-gapi-ppm-community-v1-dev-use.azurewebsites.net/hub/postalAddresses" to="https://apim-glennis-dev-use.azure-api.net/gapi/hub/postalAddresses/v1" />
+		<find-and-replace from="http://func-gapi-ppm-community-v1-dev-use.azurewebsites.net/ppm/communities" to="https://apim-glennis-dev-use.azure-api.net/gapi/ppm/communities/v1" />
+		<set-header name="CommunityNumber" exists-action="delete" />
+		<set-header name="Request-Context" exists-action="delete" />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ApimServiceName": {
+      "value": "apim-glennis-test-use"
+    },
+    "LinkedTemplatesBaseUrl": {
+      "value": "https://raw.githubusercontent.com/Glennis-CloudOps/AzureApiManagement/main/templates"
+    },
+    "LinkedTemplatesUrlQueryString": {
+      "value": "?token=AVFMQZH4BGXTB2MUVNXQAR3BW6GJO"
+    },
+    "PolicyXMLBaseUrl": {
+      "value": "https://raw.githubusercontent.com/Glennis-CloudOps/AzureApiManagement/main/templates/policies"
+    }
+  },
+  "resources": []
+}
+
+https://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@raw.githubusercontent.com/Glennis-CloudOps/AzureApiManagement/main/templates/apim-glennis-dev-use-apiVersionSets.template.json
+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

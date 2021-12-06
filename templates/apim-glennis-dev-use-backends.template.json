@@ -1,0 +1,464 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ApimServiceName": {
+      "type": "string"
+    },
+    "PolicyXMLBaseUrl": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "properties": {
+        "description": "func-functionsquickstart",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/AzureFunctionsQuickstart-rg/providers/Microsoft.Web/sites/func-functionsquickstart",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-functionsquickstart-key}}"
+            ]
+          }
+        },
+        "url": "https://func-functionsquickstart.azurewebsites.net/api",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-functionsquickstart')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rgGAPI-dev/providers/Microsoft.Web/sites/func-gapi-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-hub-businessunit-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-hub-businessunit-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-hub-businessunit-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-hub-businessunit-v1-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-businessunit-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-hub-country-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-hub-country-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-hub-country-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-hub-country-v1-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-country-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-hub-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-hub-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-hub-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-hub-dev-use.azurewebsites.net/hub",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-hub-phonenumbertype-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-hub-phonenumbertype-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-hub-phonenumbertype-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-hub-phonenumbertype-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-phonenumbertype-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-hub-phonenumbertype-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-hub-phonenumbertype-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-hub-phonenumbertype-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-hub-phonenumbertype-v1-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-phonenumbertype-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-hub-phonenumber-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-hub-phonenumber-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-hub-phonenumber-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-hub-phonenumber-v1-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-phonenumber-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-hub-postaladdresstypes-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-hub-postaladdresstypes-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-hub-postaladdresstypes-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-hub-postaladdresstypes-v1-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-postaladdresstypes-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-hub-postaladdress-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-hub-postaladdress-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-hub-postaladdress-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-hub-postaladdress-v1-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-postaladdress-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapihubv1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapihubv1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapihubv1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapihubv1-dev-use.azurewebsites.net/hub",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapihubv1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-hub-worldregion-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-hub-worldregion-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-hub-worldregion-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-hub-worldregion-v1-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-worldregion-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-ppm-brand-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-ppm-brand-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-ppm-brand-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-ppm-brand-v1-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-ppm-brand-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-ppm-caretype-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-ppm-caretype-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-ppm-caretype-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-ppm-caretype-v1-dev-use.azurewebsites.net/ppm",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-ppm-caretype-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-ppm-community-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-ppm-community-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-ppm-community-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-ppm-community-v1-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-ppm-community-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapi-ppm-roomstyletype-v1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapi-ppm-roomstyletype-v1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapi-ppm-roomstyletype-v1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapi-ppm-roomstyletype-v1-dev-use.azurewebsites.net/ppm",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-ppm-roomstyletype-v1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-gapippmv1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-gapi-dev-use/providers/Microsoft.Web/sites/func-gapippmv1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-gapippmv1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-gapippmv1-dev-use.azurewebsites.net/ppm",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapippmv1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-ppmasl-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-dev/providers/Microsoft.Web/sites/func-ppmasl-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-ppmasl-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-ppmasl-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmasl-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-ppm-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-dev/providers/Microsoft.Web/sites/func-ppm-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-ppm-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-ppm-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppm-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-ppmlistingservices-asl-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-ppm-dev-eus/providers/Microsoft.Web/sites/func-ppmlistingservices-asl-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-ppmlistingservices-asl-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-ppmlistingservices-asl-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmlistingservices-asl-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-ppmlistingservices-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-ppm-dev-eus/providers/Microsoft.Web/sites/func-ppmlistingservices-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-ppmlistingservices-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-ppmlistingservices-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmlistingservices-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-ppmlistingservicesv1-asl-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-ppm-dev-eus/providers/Microsoft.Web/sites/func-ppmlistingservicesv1-asl-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-ppmlistingservicesv1-asl-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-ppmlistingservicesv1-asl-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmlistingservicesv1-asl-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-ppmlistingservicesv1-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-ppm-dev-eus/providers/Microsoft.Web/sites/func-ppmlistingservicesv1-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-ppmlistingservicesv1-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-ppmlistingservicesv1-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmlistingservicesv1-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-ppmroomlist-asl-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-dev/providers/Microsoft.Web/sites/func-ppmroomlist-asl-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-ppmroomlist-asl-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-ppmroomlist-asl-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmroomlist-asl-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "description": "func-ppmroomlist-dev-use",
+        "resourceId": "https://management.azure.com/subscriptions/463f1e64-286d-4092-8d78-62887ad2138f/resourceGroups/rg-dev/providers/Microsoft.Web/sites/func-ppmroomlist-dev-use",
+        "credentials": {
+          "header": {
+            "x-functions-key": [
+              "{{func-ppmroomlist-dev-use-key}}"
+            ]
+          }
+        },
+        "url": "https://func-ppmroomlist-dev-use.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmroomlist-dev-use')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    }
+  ]
+}

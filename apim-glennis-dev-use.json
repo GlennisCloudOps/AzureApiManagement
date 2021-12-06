@@ -1,0 +1,10 @@
+{
+    "sourceApimName": "apim-glennis-dev-use",
+    "destinationApimName": "",
+    "resourceGroup": "rg-dev",
+    "fileFolder": "/Users/saikiran.potti/Desktop/ApiManagement/ApiManagementDev/templates",
+    "linkedTemplatesBaseUrl": "",
+    "linkedTemplatesUrlQueryString": "",
+    "policyXMLBaseUrl": ""
+}
+

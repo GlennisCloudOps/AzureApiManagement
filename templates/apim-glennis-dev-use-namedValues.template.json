@@ -1,0 +1,389 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ApimServiceName": {
+      "type": "string"
+    },
+    "PolicyXMLBaseUrl": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-functionsquickstart-key",
+        "value": "0feBiemjIShGgI8MapKQchfu9Va1vH5g4PuzJKmX2N9xWnMZyKlmmQ=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-functionsquickstart-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-dev-use-key",
+        "value": "DyRwSEoCs8qtsC8QCbm1NyUJ/LgS39UPglkjT9bl4aR/BF+CtHA/Lw=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-hub-businessunit-v1-dev-use-key",
+        "value": "POsrhRAx9nQTTzZdXo7ChlbdkR1G0rLSB8VVLEHrYtT1GKXNe5RrHw=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-businessunit-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-hub-country-v1-dev-use-key",
+        "value": "qdjCmeKh76k+lq9aB3YlwoyWbgzSwMsmPQgYWYD+A/e3oY2Y6GZHgA=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-country-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-hub-dev-use-key",
+        "value": "Kd1hI4IT8TlvB49D/buQjPHGPd8EVq1wBg2F7ZA3zqPTlsOMlZDqJA=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-hub-phonenumbertype-dev-use-key",
+        "value": "BlU2/lDrq9hgKekBhu8nQZNxrNl49TxlanG9FcrgTuOIfdVz0IYCAw=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-phonenumbertype-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-hub-phonenumbertype-v1-dev-use-key",
+        "value": "drLY2KuHJm90+/Zb2nAKVHakBdI9dbQWY2Zaosyxp6yJi1E15u3bzw=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-phonenumbertype-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-hub-phonenumber-v1-dev-use-key",
+        "value": "OrhfY1Co56KiC20Dv1Mm85/jIcdYuCFls4wT7YyaFbSUB/FS11wJug=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-phonenumber-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-hub-postaladdresstypes-v1-dev-use-key",
+        "value": "YFcY3DSX5M6ptk98OgsrIg7aHVY5zJa1Si4an0Yr63I91+DMAtT6Yg=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-postaladdresstypes-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-hub-postaladdress-v1-dev-use-key",
+        "value": "Vnwli0APGX/vgKmVVz0hTrzUeBUTzfaSKhpHidHjBCyKCI1TawOs3g=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-postaladdress-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapihubv1-dev-use-key",
+        "value": "XiJHCqfZztco4kfFLMxPCSEtDsqYVSY2sudAoqaDTP5i0iaiTE+GNA=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapihubv1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-hub-worldregion-v1-dev-use-key",
+        "value": "Q7H3d3kEAgQUNEgEJ74y5W/pOjZuut8rZ39edS8DzqoR8LZdPcx3fA=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-hub-worldregion-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-ppm-brand-v1-dev-use-key",
+        "value": "ybWicGMVYb+v18ug8Gy5/SeTV9K3qIrqMx4/TKmKEW8KhCpfm2zb4w=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-ppm-brand-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-ppm-caretype-v1-dev-use-key",
+        "value": "P2BmDMQzLXsJ8bnXoRIsQJkTNSHDv+n7Y6TO96gPojGc2AQzMhKuTg=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-ppm-caretype-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-ppm-community-v1-dev-use-key",
+        "value": "q+PRwvrDoNJM+P6vJzg+XAlhKdK3BW4Sh0ftFUcOQ9OVGMdVn4dB3w=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-ppm-community-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapi-ppm-roomstyletype-v1-dev-use-key",
+        "value": "yDxTHSWjPVixx4ozIX1XkhN3+4cMa62H299jyFk163zHN3X+uQwIDQ=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapi-ppm-roomstyletype-v1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-gapippmv1-dev-use-key",
+        "value": "fmDCZamcWIw3yr1IbUNAby/lgfCyON6yX2akS+o813D00w8/uDGX3w=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-gapippmv1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-ppmasl-dev-use-key",
+        "value": "sUVKpUamOOU5RTIgjwY7BqUzqof2z3voooaIUNoVd72ztHBWUZL8bQ=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmasl-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-ppm-dev-use-key",
+        "value": "4qWcyGY+1G1WR6flVr4YcW8Z56eYrcSKN9g9b/c0WMDj+Hms4bQ+Cg=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppm-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-ppmlistingservices-asl-dev-use-key",
+        "value": "Rwv2lxrc4PYg1s9K3V1p9/awa3II0huHBhZBurSSFaldaSuOhdrQ2Q=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmlistingservices-asl-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-ppmlistingservices-dev-use-key",
+        "value": "FB0ROMPzZCGD3/mq7m7upuGSkDzshm6iLxFZtwTkNpEJ9bQSfBTPug=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmlistingservices-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-ppmlistingservicesv1-asl-dev-use-key",
+        "value": "Uh0LxkrH0pO8vWpAHpodO7NILa3z17cGdW9es5o5DQjbX+OkSidlXw=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmlistingservicesv1-asl-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-ppmlistingservicesv1-dev-use-key",
+        "value": "K0BPwbVlPSlhGYwcQ6u0YAZTpQ7Qqjfx+NNnIdruHd20633ebzDZiw=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmlistingservicesv1-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-ppmroomlist-asl-dev-use-key",
+        "value": "ZDUxPatfzereQNr6+nuTh5ZtPkZaFfiUT8ciW4UfOfbCeoEMfvWvyA=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmroomlist-asl-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "tags": [
+          "key",
+          "function",
+          "auto"
+        ],
+        "secret": true,
+        "displayName": "func-ppmroomlist-dev-use-key",
+        "value": "hs6jL4uyn7qb7dmT+aRvCxUl+4Hw/3+/i7YJoc237Iifwx+4yhy7eQ=="
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/func-ppmroomlist-dev-use-key')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01"
+    }
+  ]
+}

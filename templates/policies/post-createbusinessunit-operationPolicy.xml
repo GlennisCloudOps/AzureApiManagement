@@ -1,0 +1,18 @@
+<policies>
+	<inbound>
+		<base />
+		<set-backend-service id="apim-generated-policy" backend-id="func-gapihubv1-dev-use" />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<set-header name="Content-Location" exists-action="override">
+			<value>@("https://apim-glennis-dev-use.azure-api.net/gapi/hub/business-units/v1/" + context.Response.Headers.GetValueOrDefault(headerName: "BusinessUnitId", defaultValue: ""))</value>
+		</set-header>
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>

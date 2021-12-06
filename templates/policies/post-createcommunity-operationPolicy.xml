@@ -1,0 +1,19 @@
+<policies>
+	<inbound>
+		<base />
+		<set-backend-service id="apim-generated-policy" backend-id="func-gapi-ppm-community-v1-dev-use" />
+		<rewrite-uri template="/ppm/communities" copy-unmatched-params="true" />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<set-header name="Content-Location" exists-action="override">
+			<value>@("https://apim-glennis-dev-use.azure-api.net/gapi/ppm/communities/v1/" + context.Response.Headers.GetValueOrDefault(headerName: "CommunityNumber", defaultValue: ""))</value>
+		</set-header>
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>

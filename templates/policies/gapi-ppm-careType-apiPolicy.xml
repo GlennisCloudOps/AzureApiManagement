@@ -1,0 +1,16 @@
+<policies>
+	<inbound>
+		<base />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<find-and-replace from="http://func-gapi-ppm-caretype-v1-dev-use.azurewebsites.net/PPM/careTypes" to="https://apim-glennis-dev-use.azure-api.net/gapi/ppm/careTypes/v1" />
+		<set-header name="Request-Context" exists-action="delete" />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>

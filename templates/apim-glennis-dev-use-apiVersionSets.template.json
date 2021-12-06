@@ -1,0 +1,107 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ApimServiceName": {
+      "type": "string"
+    },
+    "PolicyXMLBaseUrl": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "properties": {
+        "displayName": "GAPI (Hub)",
+        "description": "Provides external access to the Hub (central) data managed by the Glennis Solutions' suite of products.",
+        "versioningScheme": "Segment"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/61168902164bd47cb19924ea')]",
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "GAPI (PPM)",
+        "versioningScheme": "Segment"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/615731650b3f908617b3d919')]",
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "GAPI : PPM : Care Type",
+        "description": "External access to the Care Types managed by the Glennis Solutions' Product & Pricing Management (PPM) system.",
+        "versioningScheme": "Segment"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/61115cc88d58829c50ea0c84')]",
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "GAPI : PPM : Community",
+        "description": "External access to the Communities managed by the Glennis Solutions' suite of products.",
+        "versioningScheme": "Segment"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/60feb372614655304a37012c')]",
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "GAPI : PPM : Room Style & Room Type",
+        "versioningScheme": "Segment"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/6112f04998452ed5248bc4f5')]",
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PPM Listing Services",
+        "versioningScheme": "Segment"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/611bb1b3b00cf30bc81fb381')]",
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PPM Listing Services",
+        "versioningScheme": "Segment"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/610c4098ebe14de228831014')]",
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PPM Listing Services (ASL)",
+        "versioningScheme": "Segment"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/611c0a28ca961468699cdb30')]",
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PPM Room Listing",
+        "versioningScheme": "Segment"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/60ad298046f121275fa28a4b')]",
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PPM Room Listing",
+        "versioningScheme": "Segment"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/60ad2978c1455d9dad12d8b1')]",
+      "type": "Microsoft.ApiManagement/service/apiVersionSets",
+      "apiVersion": "2019-01-01"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<policies>
+	<inbound>
+		<base />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<find-and-replace from="http://func-gapi-ppm-roomstyletype-v1-dev-use.azurewebsites.net/ppm/roomStyles/" to="https://apim-glennis-dev-use.azure-api.net/gapi/ppm/roomStyles/v1" />
+		<find-and-replace from="http://func-gapi-ppm-roomstyletype-v1-dev-use.azurewebsites.net/ppm/communities/" to="https://apim-glennis-dev-use.azure-api.net/gapi/ppm/communities/v1" />
+		<set-header name="Request-Context" exists-action="delete" />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>

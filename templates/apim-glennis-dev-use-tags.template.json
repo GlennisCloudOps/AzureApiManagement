@@ -1,0 +1,222 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ApimServiceName": {
+      "type": "string"
+    },
+    "PolicyXMLBaseUrl": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "properties": {
+        "displayName": "Brand"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/brand')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "BusinessUnit"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/businessunit')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "CareType"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/caretype')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "Community"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/community')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "CommunityLocation"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/communitylocation')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "CommunityOwner"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/communityowner')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "CommunityStatus"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/communitystatus')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "CommunityStructure"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/communitystructure')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "CommunityStructureType"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/communitystructuretype')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "Country"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/country')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "CountryDivision"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/countrydivision')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "GAPI"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/gapi')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "Hub"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/hub')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "Language/Culture"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/language-culture')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "MarketingSpecifications"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/marketingspecifications')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PayerType"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/payertype')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PhoneNumber"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/phonenumber')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PhoneNumberType"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/phonenumbertype')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PostalAddress"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/postaladdress')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PostalAddressType"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/postaladdresstype')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "PPM"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/ppm')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "RMS"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/rms')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "Room"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/room')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "RoomStyle"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/roomstyle')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "RoomType"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/roomtype')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    },
+    {
+      "properties": {
+        "displayName": "WorldRegion"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/worldregion')]",
+      "type": "Microsoft.ApiManagement/service/tags",
+      "apiVersion": "2019-01-01"
+    }
+  ]
+}
